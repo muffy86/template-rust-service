@@ -1,0 +1,7 @@
+on:
+  push: { branches: [main, master] }
+  pull_request: { branches: [main, master] }
+  schedule: [{ cron: "0 6 * * 1" }]
+jobs:
+  sec:
+    uses: muffy86/infra-automation/.github/workflows/security.yml@main
